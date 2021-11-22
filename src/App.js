@@ -16,10 +16,7 @@ const App = () => {
       mediaRecorderRef.current = new MediaRecorder(stream);
 
       mediaRecorderRef.current.onstop = function (e) {
-        const clipName = prompt(
-          "Enter a name for your sound clip?",
-          "My unnamed clip"
-        );
+        const clipName = prompt("Nombre del audio", "Mi clip");
 
         const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
 
@@ -52,7 +49,7 @@ const App = () => {
   return (
     <div className="root">
       <header>
-        <h1>Web dictaphone</h1>
+        <h1>Filtros de audio: Ciencias de la Ingeniería II</h1>
       </header>
 
       <main>
@@ -72,7 +69,7 @@ const App = () => {
               }
             }}
           >
-            Record
+            Grabar
           </button>
           <button
             disabled={!recording}
@@ -87,7 +84,7 @@ const App = () => {
               }
             }}
           >
-            Stop
+            Parar
           </button>
         </div>
       </main>

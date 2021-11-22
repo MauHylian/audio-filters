@@ -111,7 +111,7 @@ export default function Audio({ src, name, ctx, blob, onDelete }) {
           }}
           onClick={onDelete}
         >
-          Delete
+          Borrar
         </button>
       </div>
     </div>
